@@ -106,3 +106,11 @@ Node.js를 설치하지 않거나, 컨테이너 환경에서 개발하고 싶다
 # 개발 모드로 컨테이너 실행
 docker-compose up
 ```
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
