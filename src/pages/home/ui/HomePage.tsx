@@ -13,9 +13,9 @@ export const HomePage = () => {
         {/* 1. 메인 기능 버튼 (예: 콘텐츠 관리) */}
         <button 
           style={primaryButtonStyle} 
-          onClick={() => navigate('/dashboard')}
+          onClick={() => navigate('/mypage')}
         >
-          📊 대시보드 입장
+          👤 마이페이지 입장
         </button>
 
         {/* 2. 서브 기능 버튼 (예: 사용자/설정) */}
