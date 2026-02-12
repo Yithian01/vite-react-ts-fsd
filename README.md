@@ -18,10 +18,29 @@
 ---
 
 ## 🛠 Tech Stack
-- **Framework**: React 22 (Vite)
+- **Framework**: React 19 (Vite)
 - **Language**: TypeScript
 - **Auth**: Axios Interceptors (JWT Access/Refresh)
 - **Architecture**: Feature-Sliced Design (FSD)
+
+---
+
+## 📏 Naming Conventions
+
+프로젝트의 일관성을 위해 아래 명명 규칙을 엄격히 준수합니다.
+
+| 대상 | 규칙 | 예시 |
+| :--- | :--- | :--- |
+| **Directory (Layers/Slices)** | `kebab-case` | `user-profile`, `auth-form` |
+| **Components (UI)** | `PascalCase` | `LoginForm.tsx`, `ProfileCard.tsx` |
+| **Files (Logic/Types)** | `camelCase` | `useAuth.ts`, `apiInstance.ts`, `types.ts` |
+| **Variable & Function** | `camelCase` | `isLoggedIn`, `handleLogin()` |
+| **Constant** | `SNAKE_UPPER_CASE` | `API_BASE_URL`, `MAX_RETRY_COUNT` |
+
+### 상세 규칙
+1. **FSD 폴더명**: `entities`, `features`, `widgets` 내부의 슬라이스 폴더는 반드시 **kebab-case**를 사용합니다. (예: `entities/product-detail`)
+2. **컴포넌트 파일**: React 컴포넌트 파일명과 폴더 내의 UI 파일은 **PascalCase**를 사용합니다.
+3. **Index 파일**: 각 폴더의 진입점은 항상 **index.ts**로 작성하여 외부 노출을 제어합니다. (Barrel Export)
 
 ---
 
