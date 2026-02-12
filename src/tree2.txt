@@ -1,0 +1,86 @@
+폴더 PATH의 목록입니다.
+볼륨 일련 번호는 EAA6-E1DC입니다.
+C:.
+|   main.tsx
+|   tree2.txt
+|   
++---app
+|       App.tsx
+|       
++---entities
+|   \---user
+|       |   index.ts
+|       |   
+|       +---model
+|       |       types.ts
+|       |       
+|       \---ui
+|               ProfileCard.tsx
+|               
++---features
+|   \---auth
+|       |   index.ts
+|       |   
+|       +---api
+|       |       authApi.ts
+|       |       
+|       +---model
+|       |       types.ts
+|       |       
+|       \---ui
+|               LoginForm.tsx
+|               SignupForm.tsx
+|               
++---pages
+|   +---home
+|   |   |   index.ts
+|   |   |   
+|   |   \---ui
+|   |           HomePage.tsx
+|   |           
+|   +---login
+|   |   |   index.ts
+|   |   |   
+|   |   \---ui
+|   |           LoginPage.tsx
+|   |           
+|   +---mypage
+|   |   |   index.ts
+|   |   |   
+|   |   \---ui
+|   |           MyPage.tsx
+|   |           
+|   +---signup
+|   |   |   index.ts
+|   |   |   
+|   |   \---ui
+|   |           SignupPage.tsx
+|   |           
+|   \---unauthorized
+|       |   index.ts
+|       |   
+|       \---ui
+|               UnauthorizedPage.tsx
+|               
++---shared
+|   |   index.ts
+|   |   
+|   +---api
+|   |       index.ts
+|   |       
+|   +---components
+|   |       PrivateLayout.tsx
+|   |       
+|   +---model
+|   |       types.ts
+|   |       
+|   \---ui
+|           Modal.tsx
+|           
+\---widgets
+    \---header
+        |   index.ts
+        |   
+        \---ui
+                Header.tsx
+                
