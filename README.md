@@ -97,15 +97,32 @@ Spring Boot 응답 형식은 `shared/model/types.ts`의 `ApiResponse<T>`를 표�
 
 ---
 
+<br>
+
 ## 🐳 Development with Docker (Optional)
 
-Node.js를 설치하지 않거나, 컨테이너 환경에서 개발하고 싶다면 아래 명령어를 사용하세요.
-소스 코드 수정 시 화면에 즉시 반영됩니다 (Hot Reloading).
+Node.js를 직접 설치하지 않고 컨테이너 환경에서 개발할 수 있습니다. 
+**단, 백엔드(Spring Boot)가 로컬 호스트에서 실행 중인 경우** 아래 설정을 반드시 확인해야 합니다.
 
-```bash
-# 개발 모드로 컨테이너 실행
-docker-compose up
-```
+### 1. Connection Setting (중요)
+Docker 컨테이너 내부의 프론트엔드가 로컬의 백엔드(`localhost:8080`)에 접근하려면 프록시 대상을 수정해야 합니다.
+
+- **방법 A: vite.config.ts 수정**
+  `target` 주소를 `localhost`에서 `host.docker.internal`로 변경합니다.
+    ```typescript
+    // vite.config.ts
+    proxy: {
+      '/api': {
+        target: '[http://host.docker.internal:8080](http://host.docker.internal:8080)', // localhost 대신 사용
+        changeOrigin: true,
+      }
+    }
+    ```
+
+### 2. Execution
+
+    # 개발 모드로 컨테이너 실행 (Hot Reloading 지원)
+    $ docker-compose up
 
 ---
 
